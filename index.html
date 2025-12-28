@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>tagzvuk</title>
+
+<style>
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    -webkit-tap-highlight-color:transparent;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    min-height:100vh;
+    color:white;
+    overflow-y: auto;
+}
+
+/* ФИКСИРОВАННЫЙ ФОН */
+body::before {
+    content:"";
+    position: fixed;
+    inset: 0;
+    background: url("bg.png") center / cover no-repeat;
+    filter: blur(30px) brightness(0.6);
+    transform: scale(1.15);
+    z-index: -1;
+}
+
+/* КОНТЕЙНЕР КНОПОК */
+#buttons {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px; /* увеличиваем расстояние между кнопками */
+}
+
+/* СТИЛИ КНОПОК */
+.sound-btn {
+    display: block;               
+    width: 300px;          /* увеличенная ширина */
+    height: 80px;          /* увеличенная высота */
+    line-height: 80px;     /* вертикальное выравнивание текста */
+    font-size: 26px;       /* чуть крупнее текст */
+    font-weight: bold;
+    text-align: center;
+    color: white;
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 18px;
+    border: none;
+    cursor: pointer;
+    margin: 0 auto;               
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: transform 0.15s ease, background 0.15s ease;
+}
+
+.sound-btn:active {
+    transform: scale(0.96);
+    background: rgba(255,255,255,0.3);
+}
+
+.sound-btn:focus {
+    outline: none;
+}
+</style>
+</head>
+<body>
+
+<!-- КНОПКИ -->
+<div id="buttons">
+    <button class="sound-btn"
+        onclick="window.location.href='https://nngit69.github.io/t/'">
+        творог
+    </button>
+
+    <button class="sound-btn"
+        onclick="window.location.href='https://nngit69.github.io/s/'">
+        стон
+    </button>
+
+    <button class="sound-btn"
+        onclick="window.location.href='https://nngit69.github.io/m/'">
+        mi bombo
+    </button>
+
+    <button class="sound-btn"
+        onclick="window.location.href='https://nngit69.github.io/gp/'">
+        гудок поезда
+    </button>
+
+    <button class="sound-btn"
+        onclick="window.location.href='https://nngit69.github.io/g/'">
+        Германия
+    </button>
+
+    <button class="sound-btn"
+        onclick="window.location.href='https://nngit69.github.io/dtch/'">
+        да ты чё
+    </button>
+
+    <button class="sound-btn"
+        onclick="window.location.href='https://nngit69.github.io/d/'">
+        дядя саша
+    </button>
+</div>
+
+</body>
+</html>
